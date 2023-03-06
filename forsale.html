@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>For Sale and Rent</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=0.5" />
+		<link rel="stylesheet" href="styles/tw.css" />
+		<link rel="stylesheet" href="styles/media_query/tw_query.css" />
+		<link rel="stylesheet" href="styles/img_view.css" />
+		<style>
+			#myBtn {
+				position: fixed;
+				bottom: 20px;
+				right: 30px;
+				z-index: 99;
+				font-size: 18px;
+				border: none;
+				outline: none;
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 4px;
+				display: none;
+				background-color: rgb(18, 63, 129);
+			}
+			#myBtn:hover {
+				background-color: black;
+			}
+		</style>
+	</head>
+
+	<body onscroll="scrollFnctiom()">
+		<div
+			class="body_containers"
+			id="body_containers"
+			onscroll="scrollFnctiom()"
+		>
+			<div class="top_bar" id="top_bar">
+				<img
+					class="index_logo"
+					src="./main_page/assets/Crescent.png"
+					width="90px"
+				/>
+				<h2 class="company_name_text">
+					CRESCENT CONDO AND OFFICE RENTALS INC.
+				</h2>
+
+				<ul class="ul_class" id="ul_class">
+					<li><a href="index.html" class="btn_home">HOME</a></li>
+					<li>
+						<a href="belagio1.html"> BELLAGIO 1 </a>
+					</li>
+
+					<li class="dropdown_button" id="dropdown_button" onclick="dropMenu()">
+						<a class="btn_SouthOfMarket">
+							SOUTH OF MARKET
+							<i class="fa fa-caret-down"></i>
+						</a>
+						<div class="dropdown-content" id="dropdown-content">
+							<a class="soma" id="soma" href="SouthOfMarket.html"
+								>Soma-One-BR</a
+							>
+							<a id="soma" href="soma2.html">Soma-Two- BR </a>
+						</div>
+					</li>
+					<li>
+						<a class="tw_seren" href="twoSerendra.html"> TWO SERENDRA </a>
+					</li>
+					<li>
+						<a href="otherProperties.html">OTHER PROPERTIES</a>
+					</li>
+					<li
+						class="dropdown_buttons"
+						id="dropdown_buttons"
+						onclick="dropMenus()"
+					>
+						<a class="btn_SouthOfMarket">
+							SALES/RENT
+							<i class="fa fa-caret-down"></i>
+						</a>
+						<div class="dropdown-contents" id="dropdown-contents">
+							<a class="soma active" id="soma" href="forsale.html">FOR SALE</a>
+							<a id="soma" href="forLease.html">FOR LEASE</a>
+						</div>
+					</li>
+				</ul>
+				<div id="container_id" class="container" onclick="menuIcon(this)">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</div>
+			<!-- End of Navigation Bar -->
+			<div class="sub_topBar">
+				<div class="row row_subTopBar">
+					<div class="column topBar_Section">
+						<h3>Check our available studios:</h3>
+					</div>
+					<div class="column topBar_SectionTwo">
+						<a
+							class="subBar_a"
+							id="soma_4"
+							onclick="subBarBtn(this.id)"
+							style="cursor: pointer"
+							>Unit 305N
+						</a>
+						<a
+							class="subBar_a"
+							id="soma_1"
+							onclick="subBarBtn(this.id)"
+							style="cursor: pointer"
+						>
+							Unit 1507S
+						</a>
+						<a
+							class="subBar_a"
+							id="soma_2"
+							onclick="subBarBtn(this.id)"
+							style="cursor: pointer"
+							>Unit 3705S
+						</a>
+						<a
+							class="subBar_a"
+							id="soma_3"
+							onclick="subBarBtn(this.id)"
+							style="cursor: pointer"
+							>Unit 3405N
+						</a>
+						<a
+							class="subBar_a"
+							id="soma_7"
+							onclick="subBarBtn(this.id)"
+							style="cursor: pointer"
+							>FORT VICTORIA (Taguig)
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row southOfMarket_intro">
+				<div class="column sOm_TxtIntro" id="sOm_TxtIntro4">
+					<h1>SOUTH OF MARKET <br />PRIVATE RESIDENCES</h1>
+					<dl style="font-size: 26px; margin-top: 20px; margin-left: 100px">
+						<dt>Price:</dt>
+						<dd style="padding-left: 40px">
+							-
+							<span style="color: blue; font-weight: 700"
+								>PHP 7 MM (Negotiable)</span
+							>
+						</dd>
+
+						<dt>Floor Area:</dt>
+						<dd style="padding-left: 40px">- 36.10 sq.m.</dd>
+
+						<dt style="margin-top: 20px">Additional details:</dt>
+						<dd>
+							<ul style="padding-left: 40px; margin-top: 20px">
+								<li>Without Parking</li>
+								<li>Bare</li>
+								<li>Studio Type</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="column sOm_ImgBox">
+					<div class="row row_content" id="row_content">
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/305-1.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal2');currentSlide2(1);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/305-2.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal2');currentSlide2(2);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/305-3.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal2');currentSlide2(3);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/305-4.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal2');currentSlide2(4);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="soma_one" class="row soma_one">
+				<div class="column sOm_TxtIntro" id="sOm_TxtIntro1">
+					<h1>SOUTH OF MARKET <br />PRIVATE RESIDENCES</h1>
+
+					<dl style="font-size: 26px; margin-top: 20px; margin-left: 100px">
+						<dt>Price:</dt>
+						<dd style="padding-left: 40px">
+							-
+							<span style="color: blue; font-weight: 700"
+								>PHP 8.5 MM (Negotiable)</span
+							>
+						</dd>
+
+						<dt>Floor Area:</dt>
+						<dd style="padding-left: 40px">- 40.84 sq.m</dd>
+
+						<dt style="margin-top: 20px">Additional details:</dt>
+						<dd>
+							<ul style="padding-left: 40px; margin-top: 20px">
+								<li>Studio Type</li>
+								<li>Located in 15th Floor</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="column sOm_ImgBox" id="sOm_ImgBox">
+					<div class="row row_content" id="row_content">
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/1507-1.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal3');currentSlide3(1);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/1507-2.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal3');currentSlide3(2);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/1507-3.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal3');currentSlide3(3);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/1507-4.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal3');currentSlide3(4);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/1507-5.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal3');currentSlide3(5);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/1507-6.jpg"
+								style="object-fit: fill"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal3');currentSlide3(6);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/1507-7.jpg"
+								style="object-fit: fill"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal3');currentSlide3(6);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="soma_two" class="row soma_one">
+				<div class="column sOm_TxtIntro" id="sOm_TxtIntro2">
+					<h1>SOUTH OF MARKET <br />PRIVATE RESIDENCES</h1>
+
+					<dl style="font-size: 26px; margin-top: 20px; margin-left: 100px">
+						<dt>Price:</dt>
+						<dd style="padding-left: 40px">
+							-
+							<span style="color: blue; font-weight: 700"
+								>PHP 15 MM (Negotiable)</span
+							>
+						</dd>
+
+						<dt>Floor Area:</dt>
+						<dd style="padding-left: 40px">- 74.2 sq.m</dd>
+
+						<dt style="margin-top: 20px">Additional details:</dt>
+						<dd>
+							<ul style="padding-left: 40px; margin-top: 20px">
+								<li>No. of Bedrooms: 2</li>
+								<li>No.of Bathrooms: 2</li>
+								<li>Fully Furnished</li>
+								<li>Located in 37th Floor</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="column sOm_ImgBox" id="sOm_ImgBox">
+					<div class="row row_content" id="row_content">
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3705-1.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal4');currentSlide4(1);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3705-2.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal4');currentSlide4(2);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3705-3.jpeg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal4');currentSlide4(3);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3705-4.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal4');currentSlide4(4);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3705-5.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal4');currentSlide4(5);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3705-6.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal4');currentSlide4(6);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3705-7.jpeg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal4');currentSlide4(7);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3705-8.jpeg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal4');currentSlide4(8);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="soma_three" class="row soma_one">
+				<div class="column sOm_TxtIntro" id="sOm_TxtIntro3">
+					<h1>SOUTH OF MARKET <br />PRIVATE RESIDENCES</h1>
+					<dl style="font-size: 26px; margin-top: 20px; margin-left: 100px">
+						<dt>Price:</dt>
+						<dd style="padding-left: 40px">
+							-
+							<span style="color: blue; font-weight: 700"
+								>PHP 7 MM (Negotiable)</span
+							>
+						</dd>
+
+						<dt>Floor Area:</dt>
+						<dd style="padding-left: 40px">- 40 sq.m.</dd>
+						<dt style="margin-top: 20px">Additional details:</dt>
+						<dd>
+							<ul style="padding-left: 40px; margin-top: 20px">
+								<li>Semi-Furnished</li>
+								<li>Studio Type</li>
+								<li>Located in 34th Floor</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="column sOm_ImgBox" id="sOm_ImgBox">
+					<div class="row row_content" id="row_content">
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3405-1.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal5');currentSlide5(1);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3405-2.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal5');currentSlide5(2);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3405-3.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal5');currentSlide5(3);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3405-4.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal5');currentSlide5(4);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3405-5.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal5');currentSlide5(5);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/3405-6.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal5');currentSlide5(6);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="soma_three" class="row soma_one">
+				<div class="column sOm_TxtIntro" id="sOm_TxtIntro7">
+					<h1>FORT VICTORIA (Taguig)</h1>
+					<dl style="font-size: 26px; margin-top: 20px; margin-left: 100px">
+						<dt>Rental Rate:</dt>
+						<dd style="padding-left: 40px">
+							-
+							<span style="color: blue; font-weight: 700"
+								>PHP 120-140k per month</span
+							>
+						</dd>
+
+						<dt>Floor Area:</dt>
+						<dd style="padding-left: 40px">- 140 sq.m.</dd>
+						<dt style="margin-top: 20px">Additional details:</dt>
+						<dd>
+							<ul style="padding-left: 40px; margin-top: 20px">
+								<li>4 bedroom / 3.5 baths</li>
+								<li>Duplex</li>
+								<li>Fully furnished</li>
+								<li>With parking</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="column sOm_ImgBox" id="sOm_ImgBox">
+					<div class="row row_content" id="row_content">
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/fv-1.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal7');currentSlide7(1);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/fv-2.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal7');currentSlide7(2);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/fv-3.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal7');currentSlide7(3);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/fv-4.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal7');currentSlide7(4);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/fv-5.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal7');currentSlide7(5);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/fv-6.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal7');currentSlide7(6);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/fv-7.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal7');currentSlide7(7);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/fv-8.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal7');currentSlide6(8);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column row_one">
+							<img
+								src="./main_page/assets/fv-9.jpg"
+								style="object-fit: cover"
+								width="100%"
+								height="100%"
+								onclick="openModal('myModal7');currentSlide7(9);"
+								class="hover-shadow cursor"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="myModal2" class="modal">
+				<span class="close cursor" onclick="closeModal2()">&times;</span>
+				<div class="modal-content">
+					<div class="mySlides2">
+						<img
+							src="./main_page/assets/305-1.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides2">
+						<img
+							src="./main_page/assets/305-2.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides2">
+						<img
+							src="./main_page/assets/305-3.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides2">
+						<img
+							src="./main_page/assets/305-4.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides2(1)">&#10095;</a>
+				</div>
+			</div>
+
+			<div id="myModal3" class="modal">
+				<span class="close cursor" onclick="closeModal3()">&times;</span>
+				<div class="modal-content">
+					<div class="mySlides3">
+						<img
+							src="./main_page/assets/1507-1.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides3">
+						<img
+							src="./main_page/assets/1507-2.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides3">
+						<img
+							src="./main_page/assets/1507-3.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides3">
+						<img
+							src="./main_page/assets/1507-4.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides3">
+						<img
+							src="./main_page/assets/1507-5.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides3">
+						<img
+							src="./main_page/assets/1507-6.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides3">
+						<img
+							src="./main_page/assets/1507-7.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides3(1)">&#10095;</a>
+				</div>
+			</div>
+
+			<div id="myModal4" class="modal">
+				<span class="close cursor" onclick="closeModal4()">&times;</span>
+				<div class="modal-content">
+					<div class="mySlides4">
+						<img
+							src="./main_page/assets/3705-1.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides4">
+						<img
+							src="./main_page/assets/3705-2.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides4">
+						<img
+							src="./main_page/assets/3705-3.jpeg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides4">
+						<img
+							src="./main_page/assets/3705-4.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides4">
+						<img
+							src="./main_page/assets/3705-5.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides4">
+						<img
+							src="./main_page/assets/3705-6.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides4">
+						<img
+							src="./main_page/assets/3705-7.jpeg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides4">
+						<img
+							src="./main_page/assets/3705-8.jpeg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<a class="prev" onclick="plusSlides4(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides4(1)">&#10095;</a>
+				</div>
+			</div>
+
+			<div id="myModal5" class="modal">
+				<span class="close cursor" onclick="closeModal5()">&times;</span>
+				<div class="modal-content">
+					<div class="mySlides5">
+						<img
+							src="./main_page/assets/3405-1.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides5">
+						<img
+							src="./main_page/assets/3405-2.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides5">
+						<img
+							src="./main_page/assets/3405-3.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides5">
+						<img
+							src="./main_page/assets/3405-4.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides5">
+						<img
+							src="./main_page/assets/3405-5.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides5">
+						<img
+							src="./main_page/assets/3405-6.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<a class="prev" onclick="plusSlides5(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides5(1)">&#10095;</a>
+				</div>
+			</div>
+
+			<div id="myModal7" class="modal">
+				<span class="close cursor" onclick="closeModal7()">&times;</span>
+				<div class="modal-content">
+					<div class="mySlides7">
+						<img
+							src="./main_page/assets/fv-1.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides7">
+						<img
+							src="./main_page/assets/fv-2.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides7">
+						<img
+							src="./main_page/assets/fv-3.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+
+					<div class="mySlides7">
+						<img
+							src="./main_page/assets/fv-4.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides7">
+						<img
+							src="./main_page/assets/fv-5.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides7">
+						<img
+							src="./main_page/assets/fv-6.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides7">
+						<img
+							src="./main_page/assets/fv-7.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides7">
+						<img
+							src="./main_page/assets/fv-8.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<div class="mySlides7">
+						<img
+							src="./main_page/assets/fv-9.jpg"
+							style="width: 100%; height: 500px; object-fit: contain"
+						/>
+					</div>
+					<a class="prev" onclick="plusSlides7(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides7(1)">&#10095;</a>
+				</div>
+			</div>
+			<a onclick="subBarBtn(this.id)" id="myBtn" title="Go to top"> Top </a>
+		</div>
+
+		<!-- Script -->
+
+		<script>
+			function scrollFnctiom() {
+				const bodyscrll = document.getElementById("body_containers");
+				let bscrll = bodyscrll.scrollTop;
+
+				if (bscrll < 10) {
+					document.getElementById("myBtn").style.display = "block";
+					console.log("scroled");
+				}
+
+				if (bscrll == 0) {
+					document.getElementById("myBtn").style.display = "none";
+				}
+			}
+
+			function openModal(x) {
+				var v = x;
+				switch (v) {
+					case "myModal2":
+						document.getElementById("myModal2").style.display = "block";
+						break;
+					case "myModal3":
+						document.getElementById("myModal3").style.display = "block";
+						break;
+					case "myModal4":
+						document.getElementById("myModal4").style.display = "block";
+						break;
+					case "myModal5":
+						document.getElementById("myModal5").style.display = "block";
+						break;
+					case "myModal6":
+						document.getElementById("myModal6").style.display = "block";
+						break;
+					case "myModal7":
+						document.getElementById("myModal7").style.display = "block";
+						break;
+					default:
+						location.href = "SouthOfMarket.html";
+						break;
+				}
+			}
+			// modal 1
+
+			//2
+
+			function closeModal2() {
+				document.getElementById("myModal2").style.display = "none";
+			}
+			var slideIndexs = 1;
+			showSlides2(slideIndexs);
+
+			function currentSlide2(n) {
+				showSlides2((slideIndexs = n));
+			}
+			function plusSlides2(n) {
+				showSlides2((slideIndexs += n));
+			}
+
+			function showSlides2(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides2");
+
+				if (n > slides.length) {
+					slideIndexs = 1;
+				}
+				if (n < 1) {
+					slideIndexs = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+
+				slides[slideIndexs - 1].style.display = "block";
+			}
+
+			//3
+
+			function closeModal3() {
+				document.getElementById("myModal3").style.display = "none";
+			}
+			var slideIndexs3 = 1;
+			showSlides3(slideIndexs3);
+
+			function currentSlide3(n) {
+				showSlides3((slideIndexs3 = n));
+			}
+			function plusSlides3(n) {
+				showSlides3((slideIndexs3 += n));
+			}
+
+			function showSlides3(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides3");
+
+				if (n > slides.length) {
+					slideIndexs3 = 1;
+				}
+				if (n < 1) {
+					slideIndexs3 = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+
+				slides[slideIndexs3 - 1].style.display = "block";
+			}
+
+			//4
+			function closeModal4() {
+				document.getElementById("myModal4").style.display = "none";
+			}
+			var slideIndexs4 = 1;
+			showSlides4(slideIndexs4);
+
+			function currentSlide4(n) {
+				showSlides4((slideIndexs4 = n));
+			}
+			function plusSlides4(n) {
+				showSlides4((slideIndexs4 += n));
+			}
+
+			function showSlides4(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides4");
+
+				if (n > slides.length) {
+					slideIndexs4 = 1;
+				}
+				if (n < 1) {
+					slideIndexs4 = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+
+				slides[slideIndexs4 - 1].style.display = "block";
+			}
+
+			//5
+			function closeModal5() {
+				document.getElementById("myModal5").style.display = "none";
+			}
+			var slideIndexs5 = 1;
+			showSlides5(slideIndexs5);
+
+			function currentSlide5(n) {
+				showSlides5((slideIndexs5 = n));
+			}
+			function plusSlides5(n) {
+				showSlides5((slideIndexs5 += n));
+			}
+
+			function showSlides5(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides5");
+
+				if (n > slides.length) {
+					slideIndexs5 = 1;
+				}
+				if (n < 1) {
+					slideIndexs5 = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+
+				slides[slideIndexs5 - 1].style.display = "block";
+			}
+			//7
+			function closeModal7() {
+				document.getElementById("myModal7").style.display = "none";
+			}
+			var slideIndexs7 = 1;
+			showSlides7(slideIndexs7);
+
+			function currentSlide7(n) {
+				showSlides7((slideIndexs7 = n));
+			}
+			function plusSlides7(n) {
+				showSlides7((slideIndexs7 += n));
+			}
+
+			function showSlides7(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides7");
+
+				if (n > slides.length) {
+					slideIndexs7 = 1;
+				}
+				if (n < 1) {
+					slideIndexs7 = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+
+				slides[slideIndexs7 - 1].style.display = "block";
+			}
+
+			//end of modal
+			function subBarBtn(x) {
+				var v = x;
+				var sOm_TxtIntro1 = document.getElementById("sOm_TxtIntro1");
+				var sOm_TxtIntro2 = document.getElementById("sOm_TxtIntro2");
+				var sOm_TxtIntro3 = document.getElementById("sOm_TxtIntro3");
+				var sOm_TxtIntro4 = document.getElementById("sOm_TxtIntro4");
+				var sOm_TxtIntro5 = document.getElementById("sOm_TxtIntro5");
+				switch (v.trim()) {
+					case "soma_1":
+						sOm_TxtIntro1.scrollIntoView({ behavior: "smooth" });
+						location.href = "forsale.html#sOm_TxtIntro1";
+						document.getElementById("myBtn").style.display = "block";
+						break;
+					case "soma_2":
+						sOm_TxtIntro2.scrollIntoView({ behavior: "smooth" });
+						location.href = "forsale.html#sOm_TxtIntro2";
+						document.getElementById("myBtn").style.display = "block";
+						break;
+					case "soma_3":
+						sOm_TxtIntro3.scrollIntoView({ behavior: "smooth" });
+						location.href = "forsale.html#sOm_TxtIntro3";
+						document.getElementById("myBtn").style.display = "block";
+						break;
+					case "soma_4":
+						sOm_TxtIntro4.scrollIntoView({ behavior: "smooth" });
+						location.href = "forsale.html#sOm_TxtIntro4";
+						document.getElementById("myBtn").style.display = "block";
+						break;
+					case "soma_5":
+						sOm_TxtIntro5.scrollIntoView({ behavior: "smooth" });
+						location.href = "forsale.html#sOm_TxtIntro5";
+						document.getElementById("myBtn").style.display = "block";
+						break;
+					case "soma_7":
+						sOm_TxtIntro7.scrollIntoView({ behavior: "smooth" });
+						location.href = "forsale.html#sOm_TxtIntro7";
+						document.getElementById("myBtn").style.display = "block";
+						break;
+					case "myBtn":
+						top_bar.scrollIntoView({ behavior: "auto" });
+						document.getElementById("myBtn").style.display = "none";
+						break;
+					default:
+						location.href = "forsale.html";
+						break;
+				}
+			}
+
+			function dropMenu() {
+				const dropdownContent = document.getElementById("dropdown-content");
+				dropdownContent.style.display == "none"
+					? (dropdownContent.style.display = "block")
+					: (dropdownContent.style.display = "none");
+			}
+			function dropMenus() {
+				const dropdownContents = document.getElementById("dropdown-contents");
+				var displayValue = window
+					.getComputedStyle(dropdownContents, null)
+					.getPropertyValue("display");
+				const ds = displayValue;
+				// ds == "none"
+				// 	? (dropdownContents.style.display = "block")
+				// 	: (dropdownContents.style.display = "none");
+				console.log(ds);
+				if (ds === "none") {
+					dropdownContents.style.display = "block";
+				} else {
+					dropdownContents.style.display = "none";
+				}
+			}
+
+			function myFunction() {
+				var displayss = document.getElementById("inquiry_questioniere");
+				if (displayss.style.display == "none") {
+					displayss.style.display = "block";
+				} else {
+					displayss.style.display = "none";
+				}
+			}
+
+			function menuIcon() {
+				const value = document.getElementById("container_id");
+				var displayss = document.getElementById("top_bar");
+				var ul_class = document.getElementById("ul_class");
+				value.classList.toggle("change");
+				if (value.className == "container change") {
+					displayss.style.height = "auto";
+					displayss.style.width = "100%";
+					ul_class.style.display = "block";
+				} else {
+					ul_class.style.display = "none";
+					displayss.style.height = "90px";
+				}
+			}
+
+			function mySAdwasd(x) {
+				const dropdownMenu = document.getElementById("dropdownButton");
+				var ul_class = document.getElementById("ul_class");
+				const dropdownContent = document.getElementById("dropdown-content");
+				if (x.matches) {
+					// If media query matches
+					const value = document.getElementById("container_id");
+
+					var displayss = document.getElementById("top_bar");
+
+					if (value.className == "container change") {
+						// alert("im here now");
+						ul_class.style.display = "block";
+						ul_class.style.display = "none";
+						displayss.style.height = "90px";
+						value.classList.toggle("change");
+					} else {
+						displayss.style.display = "90px";
+						ul_class.style.display = "none";
+						dropdownContent.style.display = "none";
+					}
+				} else {
+					dropdownContent.style.display = "none";
+					ul_class.style.display = "block";
+				}
+			}
+
+			var x = window.matchMedia("(max-width:1240px)");
+
+			mySAdwasd(x); // Call listener function at run time
+
+			x.addListener(mySAdwasd); // Attach listener function on state changes
+		</script>
+	</body>
+</html>
